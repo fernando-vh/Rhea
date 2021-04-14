@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,117 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.pretty-bg{
+  background: rgb(58,169,180);
+  background: linear-gradient(54deg, rgba(58,169,180,1) 0%, rgba(253,29,29,1) 50%, rgba(58,169,180,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.full-total-space{
+  width: 100vw;
+  height: 100vh;
+}
+
+.full-available-space{
+  width: 100%;
+  height: 100%;
+}
+
+.link-white{
+  color: whitesmoke;
+}
+
+.link-white:hover{
+  color: whitesmoke;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* SCROLLBAR STYLE */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: whitesmoke transparent;
+}
+
+  /* Targtes on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 3px solid whitesmoke;
+}
+
+/* UI COMPONENTES */
+.bg-black{
+  background-color: #292626;
+}
+
+/* MAIN PAGE STYLE */
+.main-page-bg{
+  background-image: url("https://cdn1.photostockeditor.com/h/0102/texture-blue-red-and-black-smoke-digital-wallpaper-abstract-abstract-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* AUTH PAGE STYLE */
+.auth-form-container{
+  background: rgba(0,0,0,.9);
+  color: aliceblue;
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-control{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.auth-title-container{
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  background: rgba(0,0,0,.9);
+  font-family: 'Coming Soon', cursive;
+  text-align: center;
+  max-width: 700px;
+  min-height: 200px;
+  border-radius: 0px 60px 60px 0px;
+  box-shadow: 0px 0px 3px whitesmoke;
+}
+
+.auth-page-bg{
+  background-image: url("https://images.unsplash.com/photo-1568870217912-18f8e402efb3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2089&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.auth-gray-bg-filter{
+  background: rgba(100,100,100, .2);
+  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.auth-form-partial-size{
+  max-width: 350px;
+  max-height: 1000px;
 }
