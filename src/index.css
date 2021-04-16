@@ -63,7 +63,11 @@ code {
 
 /* UI COMPONENTES */
 .bg-black{
-  background-color: #292626;
+  background-color: #1c1b1b;
+}
+
+.white-border-b{
+  border-bottom: 1px solid whitesmoke;
 }
 
 /* MAIN PAGE STYLE */
@@ -74,6 +78,79 @@ code {
   background-attachment: fixed;
   width: 100%;
   height: 100%;
+}
+
+/* DASHBOARD PAGE STYLE */
+.dashboard-title{
+  color: whitesmoke;
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em;
+  text-align: center;
+}
+
+.main-gray-bg-filter{
+  background: rgba(100,100,100, .5);
+  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* USER COMPONENTES STYLES */
+.user-container{
+  background: rgba(0,0,0,.7);
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+/* SONG COMPONENTES STYLES */
+.song-container{
+  border-radius: 3px;
+  border-bottom: 1px solid whitesmoke;
+  padding: 5px;
+}
+
+.songs-table{
+  background: rgba(0,0,0,.7);
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.songs-table-header{
+  background: whitesmoke;
+  font-weight: 600;
+  color: black;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.alarmed-emotion{
+  border-bottom: 1px solid rgb(168, 50, 72);
+  background: rgba(168, 50, 72,.1);
+}
+
+.tired-emotion{
+  border-bottom: 1px solid rgb(50, 168, 119);
+  background: rgba(50, 168, 119,.1);
+}
+
+.sad-emotion{
+  border-bottom: 1px solid rgb(50, 94, 168);
+  background: rgba(50, 94, 168,.1);
+}
+
+.happy-emotion{
+  border-bottom: 1px solid rgb(245, 194, 10);
+  background: rgba(245, 194, 10,.1);
 }
 
 /* AUTH PAGE STYLE */

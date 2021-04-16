@@ -12,7 +12,7 @@ export const MainRoutes = () => {
     return (
         <div className="full-total-space">
             <div className="main-page-bg">
-                <div className="auth-gray-bg-filter">
+                <div className="main-gray-bg-filter">
 
                 <MyNavbar />
 

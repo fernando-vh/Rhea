@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react"
 //import { Col, Container, Row } from "react-bootstrap"
 import { useSelector } from "react-redux";
+import { SongsTable } from "../components/dataDisplay/songsTable";
+import { UserContainer } from "../components/dataDisplay/userContainer";
 import { getProfileImagePath } from "../services/filesService";
+import { getSongsRequest } from "../services/songsService";
 import { getUserByIdRequest } from "../services/usersService"
 
 export const DashboardScreen = () => {
     const userState = useSelector(state => state.auth);
+
+    const [songs, setSongs] = useState([]);
 
     const [user, setUser] = useState({
         username: 'Fer',
@@ -18,7 +23,7 @@ export const DashboardScreen = () => {
     useEffect(() => {
         const loadUserData = async () => {
             const resp = await getUserByIdRequest(userState.uid);
-            const image = getProfileImagePath(userState.uid);
+            const image = await getProfileImagePath(userState.uid);
             const u = resp.data.user;
     
             if(u){
@@ -31,66 +36,37 @@ export const DashboardScreen = () => {
                 })
             }
         }
+
+        const loadSongData = async () => {
+            const resp = await getSongsRequest();
+            const s = resp.data.songs;
+            if(s){
+                setSongs(s);
+            }
+        }
         
         loadUserData();
-    }, [userState.uid, setUser])
+        loadSongData();
+    }, [userState.uid, setUser, setSongs])
 
     return (
         <div>
+            <div className="dashboard-title">
+                This is my creation
+            </div>
 
             <div className="d-flex">
+
                 <div className="col-md-4">
-
-                    <div className="auth-form-container">
-                        <h1>This is the profile info</h1>
-                        <img src={user.pp} alt={user.username} />
-
-                        <div className="d-flex">
-                            <div className="col-6">
-                                Username:
-                            </div>
-                            <div className="col-6">
-                                {user.username}
-                            </div>
-                        </div>
-                        <hr/>
-
-                        <div className="d-flex">
-                            <div className="col-6">
-                                Description:
-                            </div>
-                            <div className="col-6">
-                                {user.description}
-                            </div>
-                        </div>
-                        <hr/>
-
-                        <div className="d-flex">
-                            <div className="col-6">
-                                Contact:
-                            </div>
-                            <div className="col-6">
-                                {user.email}
-                            </div>
-                        </div>
-                        <hr/>
-
-                        <div className="d-flex">
-                            <div className="col-6">
-                                User since:
-                            </div>
-                            <div className="col-6">
-                                {user.userSince}
-                            </div>
-                        </div>
-                        <hr/>
-
+                    <div className="d-flex justify-content-center">
+                        <UserContainer user={user} />
                     </div>
+                </div>
 
-                </div>
                 <div className="col-md-8">
-                    <h1>These are the songs related to the profile</h1>
+                    <SongsTable songs={songs}/>
                 </div>
+
             </div>
 
         </div>
