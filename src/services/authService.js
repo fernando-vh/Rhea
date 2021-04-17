@@ -6,7 +6,7 @@ export const loginRequest = (payload) => {
             method: "post",
             url: process.env.REACT_APP_KRONOS_API_BASE_URL+'/api/auth/login',
             headers:{'Content-Type':'application/json'},
-            data: JSON.stringify(payload)
+            data: payload
         }
     )
 }
@@ -17,7 +17,7 @@ export const registerRequest = (payload) => {
             method: "post",
             url: process.env.REACT_APP_KRONOS_API_BASE_URL+'/api/auth/signin',
             headers:{'Content-Type':'application/json'},
-            data: JSON.stringify(payload)
+            data: payload
         }
     )
 }

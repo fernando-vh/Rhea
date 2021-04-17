@@ -40,6 +40,21 @@ code {
   cursor: pointer;
 }
 
+.clickable_item:hover{
+  cursor: pointer;
+}
+
+.to-overlap-container{
+  height: 38px;
+  position: relative;
+}
+
+.to-overlap-comp{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* SCROLLBAR STYLE */
 * {
   scrollbar-width: thin;
@@ -96,6 +111,10 @@ code {
   height: 100%;
 }
 
+.add-button{
+  border-radius: 20px;
+}
+
 /* USER COMPONENTES STYLES */
 .user-container{
   background: rgba(0,0,0,.7);
@@ -104,7 +123,7 @@ code {
   color: white;
   font-family: 'Montserrat', sans-serif;
   margin-top: 40px;
-  padding: 20px;
+  padding: 10px;
   max-width: 400px;
 }
 
@@ -131,6 +150,76 @@ code {
   color: black;
   margin-top: 15px;
   padding: 5px;
+}
+
+.song-title-input{
+  background-color:transparent !important;
+  border:1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow:none !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.song-title-input-focus{
+  background-color:transparent !important;
+  border:1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow:none !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/*mp3_reproductor*/
+.rhap_container {
+  max-width: 250px;
+  padding: 2px 7px;
+  border-radius: 5px;
+  
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0);
+}
+
+/*main_controls*/
+.rhap_main-controls-button{
+  color: white;
+}
+
+/*volume_controls*/
+.rhap_volume-button{
+  color: white;
+}
+
+.rhap_volume-bar{
+  background-color: rgba(190, 72, 194, 0.3);
+}
+
+.rhap_volume-indicator{
+  background-color: whitesmoke;
+}
+
+.rhap_volume-filled{
+  background-color: green;
+}
+
+/*progress_bar*/
+.rhap_progress-bar {
+  background-color: rgba(190, 72, 194, 0.3);
+}
+
+.rhap_progress-filled{
+  background-color: rgba(72, 194, 192, 0.8);
+}
+
+.rhap_progress-indicator{
+  background-color: whitesmoke;
+}
+
+/*download_progress*/
+.rhap_progress-bar-show-download{
+  background-color: yellow;
+}
+
+.rhap_download-progress{
+  background-color: yellow;
 }
 
 .alarmed-emotion{

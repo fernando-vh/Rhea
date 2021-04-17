@@ -3,7 +3,7 @@ export const UserContainer = ({user}) => {
 
             <div className="user-container text-center ">
                 <h2>This is you</h2>
-                <img src={user.pp} alt={user.username} />
+                <img src={user.pp} alt={user.username} className="m-3" />
 
                 <div className="d-flex white-border-b">
                     <div className="col-4 text-right">
@@ -35,7 +35,7 @@ export const UserContainer = ({user}) => {
                 </div>
                 <hr/>
 
-                <div className="d-flex white-border-b">
+                <div className="d-flex white-border-b mb-2">
                     <div className="col-4 text-right">
                         User since:
                     </div>
@@ -43,7 +43,7 @@ export const UserContainer = ({user}) => {
                         {user.userSince}
                     </div>
                 </div>
-                <hr/>
+
             </div>
 
     )

@@ -1,10 +1,24 @@
+import { Button } from "react-bootstrap"
 import { SongContainer } from "./songContainer"
 
 export const SongsTable = ({songs}) => {
     return(
         <>
             <div className="songs-table text-center">
-                <h2 className="mb-4">These are your songs</h2>
+
+                <div className="to-overlap-container">
+
+                    <div className="to-overlap-comp w-100">
+                        <h2 className="mb-4 d-inline">These are your songs</h2>
+                    </div>
+
+                    <div className="to-overlap-comp">
+                        <Button className="add-button" variant="outline-light">
+                            Add +
+                        </Button>
+                    </div>
+
+                </div>
 
                 <div className="d-flex songs-table-header">
                     <div className="col-2">
@@ -31,7 +45,7 @@ export const SongsTable = ({songs}) => {
                                 <SongContainer key={s.id} song={s}/>
                             )
                         )
-                        :<div>Loading...</div>
+                        :<div className="m-1">[No songs created]</div>
                 }
             </div>
         </>

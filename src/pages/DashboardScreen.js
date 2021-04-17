@@ -27,18 +27,26 @@ export const DashboardScreen = () => {
             const u = resp.data.user;
     
             if(u){
+                const d = new Date(u.createdAt);
+                const str = new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'short' }).format(d);
+
                 setUser({
                     username: u.username,
                     description: u.description,
                     email: u.email,
-                    userSince: u.createdAt,
+                    userSince: str,
                     pp:image
                 })
             }
         }
 
         const loadSongData = async () => {
-            const resp = await getSongsRequest();
+            const resp = await getSongsRequest({
+                orderBy:'createdAt:DESC',
+                limit:10,
+                userId:userState.uid
+            });
+
             const s = resp.data.songs;
             if(s){
                 setSongs(s);
