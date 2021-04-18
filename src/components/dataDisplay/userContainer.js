@@ -3,7 +3,7 @@ export const UserContainer = ({user}) => {
 
             <div className="user-container text-center ">
                 <h2>This is you</h2>
-                <img src={user.pp} alt={user.username} className="m-3" />
+                <img src={user.pp} alt={user.username} className="m-3 white-border" />
 
                 <div className="d-flex white-border-b">
                     <div className="col-4 text-right">

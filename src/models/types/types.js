@@ -1,7 +1,8 @@
 export const types = {
     ACTIONS:{
         CLASSIC_LOGIN:  "[Auth] classic login",
-        LOGOUT:         "[Auth] logout"
+        LOGOUT:         "[Auth] logout",
+        CHANGE_BG:      "[UI] change bg"
     },
     EMOTIONS:{
         ALARMED:{
@@ -28,5 +29,9 @@ export const types = {
             code:3,
             class:'sad-emotion'
         }
+    },
+    SCREEN_BG_CLASS:{
+        MAIN:'main',
+        SUBROUTES:'subroutes'
     }
 }

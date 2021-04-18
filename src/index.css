@@ -30,31 +30,6 @@ code {
   height: 100%;
 }
 
-.link-white{
-  color: whitesmoke;
-}
-
-.link-white:hover{
-  color: whitesmoke;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.clickable_item:hover{
-  cursor: pointer;
-}
-
-.to-overlap-container{
-  height: 38px;
-  position: relative;
-}
-
-.to-overlap-comp{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 /* SCROLLBAR STYLE */
 * {
   scrollbar-width: thin;
@@ -85,9 +60,38 @@ code {
   border-bottom: 1px solid whitesmoke;
 }
 
+.white-border{
+  border: 1px solid whitesmoke;
+}
+
+.link-white{
+  color: whitesmoke;
+}
+
+.link-white:hover{
+  color: whitesmoke;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.clickable_item:hover{
+  cursor: pointer;
+}
+
+.to-overlap-container{
+  height: 38px;
+  position: relative;
+}
+
+.to-overlap-comp{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* MAIN PAGE STYLE */
 .main-page-bg{
-  background-image: url("https://cdn1.photostockeditor.com/h/0102/texture-blue-red-and-black-smoke-digital-wallpaper-abstract-abstract-image.jpg");
+  background-image: url("https://i.redd.it/l4zm2grwcky41.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -95,29 +99,65 @@ code {
   height: 100%;
 }
 
-/* DASHBOARD PAGE STYLE */
-.dashboard-title{
-  color: whitesmoke;
-  font-family: 'Dancing Script', cursive;
-  font-size: 5em;
-  text-align: center;
-}
-
 .main-gray-bg-filter{
-  background: rgba(100,100,100, .5);
+  background: rgba(100,100,100, .3);
   overflow-x: scroll;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
 
-.add-button{
-  border-radius: 20px;
+/* SUB ROUTES PAGE STYLE */
+.subroutes-page-bg{
+  background-image: url("https://www.xtrafondos.com/wallpapers/nebulosa-rosa-en-el-universo-4459.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.subroutes-gray-bg-filter{
+  background: rgba(100,100,100, .1);
+  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* DASHBOARD PAGE STYLE */
+.fancy-title-text{
+  color: whitesmoke;
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em;
+  text-align: center;
+}
+
+/* COMPOSER PAGE STYLE */
+.composer-form{
+  background: rgba(10, 10, 10, .9);
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  padding: 20px;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 420px;
+  box-shadow: 0px 0px 4px whitesmoke;
+}
+
+.song-title-display{
+  overflow-wrap: break-word;
+}
+
+.emotion-button{
+  width: 90px;
+  margin: 2px;
+  text-transform: capitalize;
 }
 
 /* USER COMPONENTES STYLES */
 .user-container{
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.8);
   border: 1px solid whitesmoke;
   border-radius: 5px;
   color: white;
@@ -135,7 +175,7 @@ code {
 }
 
 .songs-table{
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.8);
   border: 1px solid whitesmoke;
   border-radius: 5px;
   color: white;
@@ -166,6 +206,10 @@ code {
   box-shadow:none !important;
   color: white !important;
   font-family: 'Montserrat', sans-serif !important;
+}
+
+.add-button{
+  border-radius: 20px;
 }
 
 /*mp3_reproductor*/

@@ -16,9 +16,13 @@ const Rhea = () => {
 
 export default Rhea;
 
-/*
+/* TODOS:
     Set up public routes restrictions, when logged you can't access login page
+    Implement delete button, with confirmation, in dashboard page
+    Implement pagging in dashboard page
+    Add name and logout option in navbar
 
+    Pulish animations
     Make a fancy loading page (when token read)
     Refactor route system
 */

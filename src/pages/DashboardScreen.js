@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react"
 //import { Col, Container, Row } from "react-bootstrap"
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { changeBgImage } from "../actions/ui";
 import { SongsTable } from "../components/dataDisplay/songsTable";
 import { UserContainer } from "../components/dataDisplay/userContainer";
+import { types } from "../models/types/types";
 import { getProfileImagePath } from "../services/filesService";
 import { getSongsRequest } from "../services/songsService";
 import { getUserByIdRequest } from "../services/usersService"
 
 export const DashboardScreen = () => {
     const userState = useSelector(state => state.auth);
+    const dispatch = useDispatch();
 
     const [songs, setSongs] = useState([]);
 
@@ -55,11 +58,12 @@ export const DashboardScreen = () => {
         
         loadUserData();
         loadSongData();
+        dispatch(changeBgImage(types.SCREEN_BG_CLASS.MAIN));
     }, [userState.uid, setUser, setSongs])
 
     return (
         <div>
-            <div className="dashboard-title">
+            <div className="fancy-title-text">
                 This is my creation
             </div>
 

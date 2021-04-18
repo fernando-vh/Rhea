@@ -26,7 +26,7 @@ export const MyNavbar = () => {
                             className="nav-item nav-link"
                             activeClassName="active"
                             to="home">
-                                login
+                                Home
                     </NavLink>
                 </Nav.Link>
 
