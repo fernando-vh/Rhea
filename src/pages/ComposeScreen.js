@@ -25,8 +25,7 @@ export const ComposeScreen = ({history}) => {
 
     useEffect(() => {
         dispatch(changeBgImage(types.SCREEN_BG_CLASS.SUBROUTES));
-        console.log('hello ive been called');
-    }, [])
+    }, [dispatch])
 
     const handleSongCreation = async (emotion) => {
         setCurrentEmotion(emotion);
@@ -133,7 +132,6 @@ export const ComposeScreen = ({history}) => {
                         <Button 
                             variant="outline-light"
                             onClick={(event)=>{
-                                    console.log(getRandomInt(0, 3));
                                     const e = [emo.ALARMED, emo.HAPPY, emo.SAD, emo.TIRED];
                                     handleSongCreation(e[getRandomInt(0, 3)], event);
                                 }}>

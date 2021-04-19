@@ -1,11 +1,3 @@
-/*
-        id:'',
-        title:'',
-        emotion:2,
-        size:2,
-        duration:2,
-        createdAt:''
-*/
 import { useState } from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
 import AudioPlayer from 'react-h5-audio-player';

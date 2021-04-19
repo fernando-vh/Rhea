@@ -133,6 +133,21 @@ code {
   text-align: center;
 }
 
+/* HOME PAGE STYLE */
+.home-welcome-container-text{
+  color: aliceblue;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home-welcome-container{
+  background-color: rgba(28, 27, 27, 0.5);
+  box-shadow: 0px 0px 30px black;
+}
+
 /* COMPOSER PAGE STYLE */
 .composer-form{
   background: rgba(10, 10, 10, .9);

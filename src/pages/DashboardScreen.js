@@ -6,14 +6,11 @@ import { SongsTable } from "../components/dataDisplay/songsTable";
 import { UserContainer } from "../components/dataDisplay/userContainer";
 import { types } from "../models/types/types";
 import { getProfileImagePath } from "../services/filesService";
-import { getSongsRequest } from "../services/songsService";
 import { getUserByIdRequest } from "../services/usersService"
 
 export const DashboardScreen = () => {
     const userState = useSelector(state => state.auth);
     const dispatch = useDispatch();
-
-    const [songs, setSongs] = useState([]);
 
     const [user, setUser] = useState({
         username: 'Fer',
@@ -42,24 +39,10 @@ export const DashboardScreen = () => {
                 })
             }
         }
-
-        const loadSongData = async () => {
-            const resp = await getSongsRequest({
-                orderBy:'createdAt:DESC',
-                limit:10,
-                userId:userState.uid
-            });
-
-            const s = resp.data.songs;
-            if(s){
-                setSongs(s);
-            }
-        }
         
         loadUserData();
-        loadSongData();
         dispatch(changeBgImage(types.SCREEN_BG_CLASS.MAIN));
-    }, [userState.uid, setUser, setSongs])
+    }, [userState.uid, setUser, dispatch])
 
     return (
         <div>
@@ -76,7 +59,7 @@ export const DashboardScreen = () => {
                 </div>
 
                 <div className="col-md-8">
-                    <SongsTable songs={songs}/>
+                    <SongsTable />
                 </div>
 
             </div>
