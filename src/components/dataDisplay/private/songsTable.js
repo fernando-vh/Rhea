@@ -9,6 +9,7 @@ import { SongContainer } from "./songContainer"
 export const SongsTable = () => {
     const history = useHistory();
     const [songs, setSongs] = useState([]);
+    const [songDeleated, setSongDeleated] = useState(false);
     const {decrement, increment, counter, setNewTotal, total} = useCounter(1,1,1);
     const userState = useSelector(state => state.auth);
 
@@ -30,11 +31,12 @@ export const SongsTable = () => {
                 setSongs(s);
                 setNewTotal(Math.ceil(resp.data.total/10));
             }
-
+            
+            setSongDeleated(false);
         }
 
         loadSongData();
-    }, [counter, setNewTotal, userState]);
+    }, [counter, setNewTotal, userState, songDeleated]);
 
     return(
         <div className="songs-table text-center animate__animated animate__bounceInRight">
@@ -95,7 +97,7 @@ export const SongsTable = () => {
                 songs.length > 0
                     ?(
                         songs.map(s => 
-                            <SongContainer key={s.id} song={s}/>
+                            <SongContainer key={s.id} song={s} setSongDeleated={setSongDeleated}/>
                         )
                     )
                     :<div className="m-1">[No songs created]</div>

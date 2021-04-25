@@ -4,11 +4,11 @@ import AudioPlayer from 'react-h5-audio-player';
 import { saveAs } from 'file-saver';
 
 import {decodeEmotionCode} from '../../../helpers/dataInterpretation'
-import { getSongPath } from '../../../services/filesService';
+import { deleteSongRequest, getSongPath } from '../../../services/filesService';
 import { updateSongRequest } from '../../../services/songsService';
 import { createResponseNotification } from '../../../helpers/create-notification';
 
-export const SongContainer = ({song}) => {
+export const SongContainer = ({song, setSongDeleated}) => {
     const emotion = decodeEmotionCode(song.emotion_code);
 
     const [title, setTitle] = useState(song.title);
@@ -45,6 +45,12 @@ export const SongContainer = ({song}) => {
 
     const toggleEditMode = () => {
         setDisabled(!disabled);
+    }
+
+    const handleDelete = async () => {
+        setSongDeleated(true);
+        const resp = await deleteSongRequest(song.id);
+        createResponseNotification(resp);
     }
 
     return (
@@ -90,7 +96,12 @@ export const SongContainer = ({song}) => {
                     <i  onClick={toggleEditMode}
                         className="fa fa-pencil-alt mr-3 clickable_item"></i>
 
-                    <i className="fa fa-trash-alt mr-2 clickable_item"></i>
+                    <i  onClick={()=>{
+                        if (window.confirm('Are you sure you wish to delete this song?')){
+                            handleDelete()
+                        }
+                    }}
+                        className="fa fa-trash-alt mr-2 clickable_item"></i>
 
                 </div>
             </div>

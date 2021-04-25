@@ -23,8 +23,8 @@ export default Rhea;
     
     fix:
         -fix token expiration
-        -npm audit fix
         -fix that anoying paging movement
+        -npm audit fix
     
     implement:
         -Set up public routes restrictions, when logged you can't access login page
