@@ -39,7 +39,7 @@ export const MyNavbar = () => {
                     <NavLink 
                             className="nav-item nav-link"
                             activeClassName="active"
-                            to="home">
+                            to="/home">
                                 Home
                     </NavLink>
                 </Nav.Link>
@@ -48,7 +48,7 @@ export const MyNavbar = () => {
                     <NavLink 
                             className="nav-item nav-link"
                             activeClassName="active"
-                            to="dashboard">
+                            to="/dashboard">
                                 Dashboard
                     </NavLink>
                 </Nav.Link>

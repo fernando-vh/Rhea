@@ -13,6 +13,18 @@ export const getSongsRequest = (query) => {
     )
 }
 
+export const getSongById = (id) => {
+    return createAxiosRequest(
+        {
+            method:'get',
+            url: process.env.REACT_APP_KRONOS_API_BASE_URL+`/api/songs/${id}`,
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
+        }
+    )
+}
+
 export const updateSongRequest = (payload, id) => {
     return createAxiosRequest(
         {

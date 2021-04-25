@@ -10,6 +10,7 @@ import { ComposeScreen } from "../pages/ComposeScreen";
 import { DashboardScreen } from "../pages/DashboardScreen";
 import { HomeScreen } from "../pages/HomeScreen";
 import { SearchScreen } from "../pages/SearchScreen";
+import { ViewScreen } from "../pages/ViewScreen";
 
 export const MainRoutes = () => {
     const uiState = useSelector(state => state.ui);
@@ -22,10 +23,11 @@ export const MainRoutes = () => {
                     <MyNavbar />
 
                     <Switch>
-                        <Route exact path="/home"       component={HomeScreen} />
-                        <Route exact path="/dashboard"  component={DashboardScreen} />
-                        <Route exact path="/composer"   component={ComposeScreen} />
-                        <Route exact path="/search"     component={SearchScreen} />
+                        <Route exact path="/home"                   component={HomeScreen} />
+                        <Route exact path="/dashboard"              component={DashboardScreen} />
+                        <Route exact path="/composer"               component={ComposeScreen} />
+                        <Route exact path="/search"                 component={SearchScreen} />
+                        <Route exact path="/view/:component/:id"    component={ViewScreen} />
 
                         <Redirect to="/home" />
                     </Switch>

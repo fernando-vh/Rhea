@@ -3,7 +3,7 @@ import { Button, InputGroup, FormControl} from "react-bootstrap"
 import AudioPlayer from "react-h5-audio-player";
 import { createResponseNotification } from "../helpers/create-notification";
 import { types } from "../models/types/types"
-import { createNewSong, deleteSong, getSongPath } from "../services/filesService";
+import { createNewSongRequest, deleteSongRequest, getSongPath } from "../services/filesService";
 import {getRandomInt} from '../helpers/util';
 import {changeBgImage} from '../actions/ui';
 import { useDispatch } from "react-redux";
@@ -31,7 +31,7 @@ export const ComposeScreen = ({history}) => {
         setCurrentEmotion(emotion);
 
         if(currentSong.id !== ''){
-            await deleteSong(currentSong.id);
+            await deleteSongRequest(currentSong.id);
         }
 
         let payload = title.length > 0
@@ -45,7 +45,7 @@ export const ComposeScreen = ({history}) => {
                     emotionCode:emotion.code
                 };
 
-        const resp = await createNewSong(payload);
+        const resp = await createNewSongRequest(payload);
         createResponseNotification(resp);
         
         if(resp.status === 201){
@@ -59,7 +59,7 @@ export const ComposeScreen = ({history}) => {
 
     const leavePage = async (ereaseSong) => {
         if(ereaseSong && currentSong.id !== ''){
-            await deleteSong(currentSong.id);
+            await deleteSongRequest(currentSong.id);
         }
         history.push('/dashboard');
     }

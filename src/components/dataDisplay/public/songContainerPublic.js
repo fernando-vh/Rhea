@@ -5,6 +5,8 @@ import {decodeEmotionCode} from '../../../helpers/dataInterpretation'
 import { getSongPath } from '../../../services/filesService';
 import { useEffect, useState } from 'react';
 import { getUserByIdRequest } from '../../../services/usersService';
+import { Link } from 'react-router-dom';
+import { types } from '../../../models/types/types';
 
 const initialState = {
     username:''
@@ -29,7 +31,11 @@ export const SongContainerPublic = ({song}) => {
 
             <div className="d-flex align-items-center">
                 <div className="col-2 cut-text">
-                    <span className="link-white">{user.username}</span>
+                    <Link 
+                        className="link-white"
+                        to={`/view/${types.SEARCH_COMPONENTS.USERS}/${user.id}`}>
+                            {user.username}
+                    </Link>
                 </div>
                 <div className="col-4 cut-text">
                     {song.title}

@@ -56,7 +56,7 @@ export const ResultTable = ({term}) => {
                     }
                 );
                 setData(data2);
-                setNewTotal(Math.floor(resp.data.total/10));
+                setNewTotal(Math.ceil(resp.data.total/10));
             }
         }
 

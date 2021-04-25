@@ -18,7 +18,7 @@ export const SongsTablePublic = () => {
             const s = resp.data.songs;
             if(s){
                 setSongs(s);
-                setNewTotal(Math.floor(resp.data.total/10));
+                setNewTotal(Math.ceil(resp.data.total/10));
             }
 
         }

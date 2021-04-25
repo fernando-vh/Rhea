@@ -19,14 +19,12 @@ export default Rhea;
 /* TODOS:
     add:
         -user edit page
-        -search page
-        -visualizing page for users and songs?
+        -404 for user/song not found id
     
     fix:
-        -Fix the auto resizing in home page (long title)
         -fix token expiration
-        -load image from project, not from endpoints
         -npm audit fix
+        -fix that anoying paging movement
     
     implement:
         -Set up public routes restrictions, when logged you can't access login page
@@ -35,6 +33,5 @@ export default Rhea;
         -implement facebook and google login
 
 
-    Pulish animations
-    Make a fancy loading page (when token read)
+    Make a fancy loading page (when token read)?
 */

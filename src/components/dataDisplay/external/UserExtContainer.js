@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { getProfileImagePath } from "../../../services/filesService";
 import { getUserByIdRequest } from "../../../services/usersService";
 
@@ -8,17 +7,17 @@ const initialState = {
     description: 'this is a generic description, so dont judge me',
     email: 'mymail@mail.com',
     userSince: '23/23/23',
-    pp: 'meh'
+    pp: 'meh',
+    privateEmail:false
 }
 
-export const UserContainer = () => {
-    const userState = useSelector(state => state.auth);
+export const UserExtContainer = ({uid}) => {
     const [user, setUser] = useState(initialState);
 
     useEffect(() => {
         const loadUserData = async () => {
-            const resp = await getUserByIdRequest(userState.uid);
-            const image = await getProfileImagePath(userState.uid);
+            const resp = await getUserByIdRequest(uid);
+            const image = await getProfileImagePath(uid);
             const u = resp.data.user;
     
             if(u){
@@ -30,18 +29,19 @@ export const UserContainer = () => {
                     description: u.description,
                     email: u.email,
                     userSince: str,
-                    pp:image
+                    pp:image,
+                    privateEmail:u.private_email
                 })
             }
         }
         
         loadUserData();
-    }, [userState.uid, setUser])
+    }, [uid, setUser])
 
     return(
 
-        <div className="user-container text-center animate__animated animate__bounceInLeft">
-            <h2>This is you</h2>
+        <div className="user-view-container text-center animate__animated animate__bounceInUp">
+            <h2>This is me</h2>
             <img src={user.pp} alt={user.username} className="m-3 white-border" />
 
             <div className="d-flex white-border-b">
@@ -64,15 +64,24 @@ export const UserContainer = () => {
             </div>
             <hr/>
 
-            <div className="d-flex white-border-b">
-                <div className="col-4 text-right">
-                    Contact:
-                </div>
-                <div className="col-8">
-                    {user.email}
-                </div>
-            </div>
-            <hr/>
+            {
+                !user.privateEmail &&
+                    (
+                        <div>
+
+                            <div className="d-flex white-border-b">
+                                <div className="col-4 text-right">
+                                    Contact:
+                                </div>
+                                <div className="col-8">
+                                    {user.email}
+                                </div>
+                            </div>
+                            <hr />
+
+                        </div>
+                    )
+            }
 
             <div className="d-flex white-border-b mb-2">
                 <div className="col-4 text-right">

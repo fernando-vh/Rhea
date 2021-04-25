@@ -121,11 +121,75 @@ code {
 }
 
 .subroutes-gray-bg-filter{
-  background: rgba(100,100,100, .3);
+  background: rgba(100,100,100, .2);
   overflow-x: scroll;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+}
+
+/* VIEW PAGE STYLE */
+.view-page-bg{
+  /*background-image: url("http://www.baltana.com/files/wallpapers-13/Vibrant-HD-Desktop-Wallpaper-35772.jpg");*/
+  background-image: url('./assets/clouds2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.view-gray-bg-filter{
+  background: rgba(100,100,100, .2);
+  overflow-x: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.user-view-container{
+  background: rgba(0,0,0,.4);
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.songs-view-table{
+  background: rgba(0,0,0,.4);
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.song-view-row{
+  border-radius: 3px;
+  border-bottom: 1px solid whitesmoke;
+  padding: 5px;
+}
+
+.song-view-container2{
+  background:rgba(255, 255, 255, .1);
+  border-radius: 2px;
+  border: 1px solid whitesmoke;
+  box-shadow: 0px 0px 4px whitesmoke;
+  padding: 5px;
+}
+
+.song-view-container{
+  background: rgba(10, 10, 10, .4);
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  padding: 20px;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 0px 4px whitesmoke;
 }
 
 /* DASHBOARD PAGE STYLE */
