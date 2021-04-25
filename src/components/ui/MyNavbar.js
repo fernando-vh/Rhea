@@ -1,10 +1,24 @@
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import {
     NavLink,
-    Link
+    Link,
+    useHistory
 } from 'react-router-dom';
 
 export const MyNavbar = () => {
+    const history = useHistory();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const term = e.currentTarget.searchTerm.value;
+        const l = term.length;
+
+        if( (term.includes('@')? l > 1 : l > 0) && l < 100 ){
+            history.push(`/search?term=${term}`);
+        }
+    }
+
     return (
         <Navbar bg="black" expand="lg" variant="dark">
 
@@ -41,9 +55,19 @@ export const MyNavbar = () => {
 
             </Nav>
 
-            <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-light">Search</Button>
+            <Form inline onSubmit={handleSubmit}>
+
+                <Form.Group controlId="searchTerm">
+
+                    <FormControl 
+                        type="text" 
+                        placeholder="Search (@forUsername)" 
+                        className="mr-sm-2" />
+
+                </Form.Group>
+
+            <Button variant="outline-light" type="submit">Search</Button>
+
             </Form>
         </Navbar.Collapse>
         </Navbar>

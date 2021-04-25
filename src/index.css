@@ -89,6 +89,7 @@ code {
   left: 0;
 }
 
+
 /* MAIN PAGE STYLE */
 .main-page-bg{
   background-image: url("https://i.redd.it/l4zm2grwcky41.jpg");
@@ -109,7 +110,8 @@ code {
 
 /* SUB ROUTES PAGE STYLE */
 .subroutes-page-bg{
-  background-image: url("https://www.xtrafondos.com/wallpapers/nebulosa-rosa-en-el-universo-4459.jpg");
+  /*background-image: url("https://www.xtrafondos.com/wallpapers/nebulosa-rosa-en-el-universo-4459.jpg");*/
+  background-image: url('./assets/planets.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -118,7 +120,7 @@ code {
 }
 
 .subroutes-gray-bg-filter{
-  background: rgba(100,100,100, .1);
+  background: rgba(100,100,100, .3);
   overflow-x: scroll;
   overflow-x: hidden;
   width: 100%;
@@ -131,6 +133,30 @@ code {
   font-family: 'Dancing Script', cursive;
   font-size: 5em;
   text-align: center;
+}
+
+/* SEARCH PAGE STYLE */
+.search-result-table{
+  color: aliceblue;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-result-container{
+  border-radius: 3px;
+  border: 1px solid rgba(245, 245, 245, .5);
+  background: rgba(245, 245, 245, .1);
+  padding: 5px;
+  margin: 15px 0px 15px 0px;
+}
+
+.cut-text{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* HOME PAGE STYLE */

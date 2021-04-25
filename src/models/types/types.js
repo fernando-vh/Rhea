@@ -33,5 +33,9 @@ export const types = {
     SCREEN_BG_CLASS:{
         MAIN:'main',
         SUBROUTES:'subroutes'
+    },
+    SEARCH_COMPONENTS:{
+        SONGS:'songs',
+        USERS:'users'
     }
 }

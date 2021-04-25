@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap"
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
-import { useCounter } from "../../hooks/useCounter";
-import { getSongsRequest } from "../../services/songsService";
+import { useCounter } from "../../../hooks/useCounter";
+import { getSongsRequest } from "../../../services/songsService";
 import { SongContainer } from "./songContainer"
 
 export const SongsTable = () => {

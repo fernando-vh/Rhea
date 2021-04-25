@@ -3,10 +3,10 @@ import { FormControl, InputGroup } from 'react-bootstrap';
 import AudioPlayer from 'react-h5-audio-player';
 import { saveAs } from 'file-saver';
 
-import {decodeEmotionCode} from '../../helpers/dataInterpretation'
-import { getSongPath } from '../../services/filesService';
-import { updateSongRequest } from '../../services/songsService';
-import { createResponseNotification } from '../../helpers/create-notification';
+import {decodeEmotionCode} from '../../../helpers/dataInterpretation'
+import { getSongPath } from '../../../services/filesService';
+import { updateSongRequest } from '../../../services/songsService';
+import { createResponseNotification } from '../../../helpers/create-notification';
 
 export const SongContainer = ({song}) => {
     const emotion = decodeEmotionCode(song.emotion_code);

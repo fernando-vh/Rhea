@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
-//import { Col, Container, Row } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux";
 import { changeBgImage } from "../actions/ui";
-import { SongsTable } from "../components/dataDisplay/songsTable";
-import { UserContainer } from "../components/dataDisplay/userContainer";
+import { SongsTable } from "../components/dataDisplay/private/songsTable";
+import { UserContainer } from "../components/dataDisplay/private/userContainer";
 import { types } from "../models/types/types";
 import { getProfileImagePath } from "../services/filesService";
 import { getUserByIdRequest } from "../services/usersService"
