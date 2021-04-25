@@ -15,9 +15,10 @@ export const HomeScreen = () => {
         <div className="m-3 d-flex"> 
 
             <div className="col-4 home-welcome-container">
-                <div className="fancy-title-text">Welcome to the MMC</div>
+                <div className="fancy-title-text animate__animated animate__flipInX">
+                    Welcome to the MMC</div>
                 
-                <div className="home-welcome-container-text">
+                <div className="home-welcome-container-text animate__animated animate__lightSpeedInLeft">
                     MMC or <span className="font-italic">My Music Creator</span> is a project that consist on the use of AI to build music pieces 
                     <small className="font-italic m-1">(That may not be as complex or pretty as a song created by a person)</small>. But we think
                     that a 30 seconds song created by a machine is impressive enough.

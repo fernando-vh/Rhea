@@ -48,7 +48,7 @@ export const SongContainer = ({song}) => {
     }
 
     return (
-        <div className="song-container">
+        <div className="song-container animate__animated animate__fadeIn">
 
             <div className="d-flex align-items-center">
                 <div className="col-2">

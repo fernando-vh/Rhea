@@ -28,7 +28,7 @@ export const SongsTablePublic = () => {
     }, [counter, setNewTotal]);
 
     return(
-        <div>
+        <div className="animate__animated animate__fadeIn">
             <div className="home-welcome-container-text text-center">
 
                 <div className="to-overlap-container">

@@ -92,7 +92,8 @@ code {
 
 /* MAIN PAGE STYLE */
 .main-page-bg{
-  background-image: url("https://i.redd.it/l4zm2grwcky41.jpg");
+  /*background-image: url("https://i.redd.it/l4zm2grwcky41.jpg");*/
+  background-image: url('./assets/sunrise.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -356,7 +357,8 @@ code {
 }
 
 .auth-page-bg{
-  background-image: url("https://images.unsplash.com/photo-1568870217912-18f8e402efb3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2089&q=80");
+  /*background-image: url("https://images.unsplash.com/photo-1568870217912-18f8e402efb3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2089&q=80");*/
+  background-image: url('./assets/blurry-ligths1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

@@ -1,7 +1,7 @@
 export const UserContainer = ({user}) => {
     return(
 
-            <div className="user-container text-center ">
+            <div className="user-container text-center animate__animated animate__bounceInLeft">
                 <h2>This is you</h2>
                 <img src={user.pp} alt={user.username} className="m-3 white-border" />
 

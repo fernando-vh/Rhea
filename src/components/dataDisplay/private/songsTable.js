@@ -37,7 +37,7 @@ export const SongsTable = () => {
     }, [counter, setNewTotal, userState]);
 
     return(
-        <div className="songs-table text-center">
+        <div className="songs-table text-center animate__animated animate__bounceInRight">
 
             <div className="to-overlap-container">
 

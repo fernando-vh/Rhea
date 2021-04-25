@@ -23,7 +23,7 @@ export const ResultContainer = ({result}) => {
     }, [result]);
 
     return (
-        <div className="search-result-container animate__animated animate__fadeIn">
+        <div className="search-result-container animate__animated animate__bounceInLeft">
 
             <div className="d-flex">
                 <div className="col-3 cut-text">
