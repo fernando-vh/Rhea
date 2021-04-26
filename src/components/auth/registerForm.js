@@ -109,20 +109,6 @@ export const RegisterForm = ({setNewUser}) => {
                 </Form.Group>
             */}
             
-            <p className="text-center">or</p>
-
-            <div className="mb-3">
-                <Button className="mb-2 w-100" variant="danger">
-                    <i className="fab fa-google"></i>
-                    <small className="ml-1">Sign in with google</small>
-                </Button>
-
-                <Button className="mb-2 w-100" variant="primary">
-                    <i className="fab fa-facebook-f"></i>
-                    <small className="ml-1">Sign in with facebook</small>
-                </Button>
-            </div>
-            
             <div className="d-flex justify-content-between">
                 <Col>
                     <Button variant="outline-light" type="submit">

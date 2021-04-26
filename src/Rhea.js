@@ -22,16 +22,12 @@ export default Rhea;
         -404 for user/song not found id
     
     fix:
-        -fix token expiration
-        -fix that anoying paging movement
+        -fix that anoying paging movement (home/search)
         -npm audit fix
     
     implement:
-        -Set up public routes restrictions, when logged you can't access login page
-        -Implement delete button, with confirmation, in dashboard page
-        -Add name and logout option in navbar
-        -implement facebook and google login
 
-
-    Make a fancy loading page (when token read)?
+    Make fancy notification message when delete
+    
+    Make a fancy loading page (when token read) or maybe not?
 */

@@ -38,5 +38,10 @@ export const types = {
     SEARCH_COMPONENTS:{
         SONGS:'songs',
         USERS:'users'
+    },
+    LOGIN_TYPE:{
+        INTERNAL:1,
+        GOOGLE:2,
+        FACEBOOK:3
     }
 }

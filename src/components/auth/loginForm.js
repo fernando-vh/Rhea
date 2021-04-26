@@ -3,11 +3,25 @@ import { Button, Col, Form } from "react-bootstrap"
 import {PropTypes} from 'prop-types';
 
 import { useDispatch } from "react-redux";
-import { classicLogin } from "../../actions/auth";
+import { classicLogin, facebookLogin, googleLogin } from "../../actions/auth";
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import GoogleLogin from "react-google-login";
 
 export const LoginForm = ({setNewUser}) => {
     const [validate, setValidate] = useState(false);
     const dispatch = useDispatch();
+
+    const responseFacebook = async (response) => {
+        if(!response.status){
+            dispatch(facebookLogin(response.accessToken));
+        }
+    }
+
+    const responseGoogle = async (response) => {
+        if(response.tokenId){
+            dispatch(googleLogin(response.tokenId));
+        }
+    }
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -72,15 +86,35 @@ export const LoginForm = ({setNewUser}) => {
             <p className="text-center">or</p>
 
             <div className="mb-3">
-                <Button className="mb-2 w-100" variant="danger">
-                    <i className="fab fa-google"></i>
-                    <small className="ml-1">Login with google</small>
-                </Button>
+                <GoogleLogin
+                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                    render={renderProps => (
+                        <Button 
+                            onClick={renderProps.onClick}
+                            disabled={renderProps.disabled}
+                            className="mb-2 w-100"
+                            variant="danger">
+                                <i className="fab fa-google"></i>
+                                <small className="ml-1">Signin with google</small>
+                        </Button>
+                    )}
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    autoLoad={false}
+                />
 
-                <Button className="mb-2 w-100" variant="primary">
-                    <i className="fab fa-facebook-f"></i>
-                    <small className="ml-1">Login with facebook</small>
-                </Button>
+                <FacebookLogin
+                    appId={process.env.REACT_APP_FACEBOOK_CLIENT_ID}
+                    autoLoad={false}
+                    callback={responseFacebook}
+                    render={renderProps => (
+                        <Button className="mb-2 w-100" variant="primary" onClick={renderProps.onClick}>
+                            <i className="fab fa-facebook-f"></i>
+                            <small className="ml-1">Signin with facebook</small>
+                        </Button>
+                    )}
+                />
+
             </div>
             
             <div className="d-flex justify-content-between">

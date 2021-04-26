@@ -11,6 +11,28 @@ export const loginRequest = (payload) => {
     )
 }
 
+export const loginFacebookRequest = (payload) => {
+    return createAxiosRequest(
+        {
+            method: "post",
+            url: process.env.REACT_APP_KRONOS_API_BASE_URL+'/api/auth/login/facebook',
+            headers:{'Content-Type':'application/json'},
+            data: payload
+        }
+    )
+}
+
+export const loginGoogleRequest = (payload) => {
+    return createAxiosRequest(
+        {
+            method: "post",
+            url: process.env.REACT_APP_KRONOS_API_BASE_URL+'/api/auth/login/google',
+            headers:{'Content-Type':'application/json'},
+            data: payload
+        }
+    )
+}
+
 export const registerRequest = (payload) => {
     return createAxiosRequest(
         {

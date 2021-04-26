@@ -74,6 +74,16 @@ code {
   cursor: pointer;
 }
 
+.link-green{
+  color: rgb(50, 168, 119);
+}
+
+.link-green:hover{
+  color: rgb(50, 168, 119);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .clickable_item:hover{
   cursor: pointer;
 }

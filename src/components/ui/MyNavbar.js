@@ -1,12 +1,16 @@
-import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Button, Dropdown, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import {
     NavLink,
     Link,
     useHistory
 } from 'react-router-dom';
+import { logout } from '../../actions/auth';
 
 export const MyNavbar = () => {
     const history = useHistory();
+    const userState = useSelector(state => state.auth);
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,6 +20,22 @@ export const MyNavbar = () => {
 
         if( (term.includes('@')? l > 1 : l > 0) && l < 100 ){
             history.push(`/search?term=${term}`);
+        }
+    }
+
+    const handleUserDropdownMenu = (option) =>{
+        switch(option){
+            case 0:
+                dispatch(logout());
+                break;
+            case 1:
+                history.push('dashboard');
+                break;
+            case 2:
+                //go to setting
+                break;
+
+            default:;
         }
     }
 
@@ -54,6 +74,18 @@ export const MyNavbar = () => {
                 </Nav.Link>
 
             </Nav>
+
+            <Dropdown className="mr-3 mt-2 mb-2">
+                <Dropdown.Toggle variant="outline-info" id="dropdown-basic">
+                    <i className="far fa-user"></i> {userState.username}
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item onClick={()=>handleUserDropdownMenu(0)}>Logout</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>handleUserDropdownMenu(1)}>Go to profile</Dropdown.Item>
+                    <Dropdown.Item onClick={()=>handleUserDropdownMenu(2)}>Settings</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
 
             <Form inline onSubmit={handleSubmit}>
 
