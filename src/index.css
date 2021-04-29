@@ -30,6 +30,10 @@ code {
   height: 100%;
 }
 
+.fix-button-size-100px{
+  width: 100px;
+}
+
 /* SCROLLBAR STYLE */
 * {
   scrollbar-width: thin;
@@ -99,6 +103,9 @@ code {
   left: 0;
 }
 
+.word-break{
+  overflow-wrap: break-word;
+}
 
 /* MAIN PAGE STYLE */
 .main-page-bg{
@@ -200,6 +207,35 @@ code {
   color: whitesmoke;
   font-family: 'Montserrat', sans-serif;
   box-shadow: 0px 0px 4px whitesmoke;
+}
+
+/* EDITOR SCREEN */
+.editor-component{
+  background: rgba(0, 0, 0, .5);
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid whitesmoke;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0px 0px 4px whitesmoke;
+}
+
+.section-div{
+  font-style: italic;
+  font-size: 25px;
+}
+
+.editor-card{
+  background-color: transparent;
+  border: 1px solid rgba(245, 245, 245, .6) !important;
+  font-style: italic !important;
+}
+
+.editor-card-header{
+  background-color: transparent;
+  font-style: italic !important;
+  padding: 0px;
 }
 
 /* DASHBOARD PAGE STYLE */

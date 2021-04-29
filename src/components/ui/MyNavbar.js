@@ -29,10 +29,10 @@ export const MyNavbar = () => {
                 dispatch(logout());
                 break;
             case 1:
-                history.push('dashboard');
+                history.push('/dashboard');
                 break;
             case 2:
-                //go to setting
+                history.push('/editor/user');
                 break;
 
             default:;

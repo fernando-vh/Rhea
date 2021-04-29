@@ -48,7 +48,7 @@ export const UserExtContainer = ({uid}) => {
                 <div className="col-4 text-right">
                     Username:
                 </div>
-                <div className="col-8">
+                <div className="col-8 word-break">
                     {user.username}
                 </div>
             </div>
@@ -58,7 +58,7 @@ export const UserExtContainer = ({uid}) => {
                 <div className="col-4 text-right">
                     Description:
                 </div>
-                <div className="col-8">
+                <div className="col-8 word-break">
                     {user.description}
                 </div>
             </div>
@@ -73,7 +73,7 @@ export const UserExtContainer = ({uid}) => {
                                 <div className="col-4 text-right">
                                     Contact:
                                 </div>
-                                <div className="col-8">
+                                <div className="col-8 word-break">
                                     {user.email}
                                 </div>
                             </div>

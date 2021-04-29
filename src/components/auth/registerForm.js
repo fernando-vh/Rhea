@@ -3,6 +3,7 @@ import { Button, Col, Form } from "react-bootstrap"
 import {PropTypes} from 'prop-types';
 
 import {registerRequest} from '../../services/authService';
+import { createResponseNotification } from "../../helpers/create-notification";
 
 export const RegisterForm = ({setNewUser}) => {
     const [validate, setValidate] = useState(false);
@@ -26,7 +27,8 @@ export const RegisterForm = ({setNewUser}) => {
             if(resp.status === 201){
                 setNewUser(false);
             }
-
+            
+            createResponseNotification(resp);
         }
         
         setValidate(true);

@@ -26,8 +26,8 @@ export default Rhea;
         -npm audit fix
     
     implement:
-
-    Make fancy notification message when delete
+        -token with long duration (10days)??, when remember me?
     
+        
     Make a fancy loading page (when token read) or maybe not?
 */

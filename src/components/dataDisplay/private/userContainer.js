@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import { getProfileImagePath } from "../../../services/filesService";
 import { getUserByIdRequest } from "../../../services/usersService";
 
@@ -14,6 +15,7 @@ const initialState = {
 export const UserContainer = () => {
     const userState = useSelector(state => state.auth);
     const [user, setUser] = useState(initialState);
+    const history = useHistory();
 
     useEffect(() => {
         const loadUserData = async () => {
@@ -41,14 +43,23 @@ export const UserContainer = () => {
     return(
 
         <div className="user-container text-center animate__animated animate__bounceInLeft">
-            <h2>This is you</h2>
+            <div className="to-overlap-container">
+                <div className="to-overlap-comp w-100">
+                    <h2>This is you</h2>
+                </div>
+                <div className="to-overlap-comp w-100 text-right">
+                    <i 
+                        className="fas fa-cog fa-2x m-1 clickable_item"
+                        onClick={()=>{history.push('/editor/user')}}></i>
+                </div>
+            </div>
             <img src={user.pp} alt={user.username} className="m-3 white-border" />
 
             <div className="d-flex white-border-b">
                 <div className="col-4 text-right">
                     Username:
                 </div>
-                <div className="col-8">
+                <div className="col-8 word-break">
                     {user.username}
                 </div>
             </div>
@@ -58,7 +69,7 @@ export const UserContainer = () => {
                 <div className="col-4 text-right">
                     Description:
                 </div>
-                <div className="col-8">
+                <div className="col-8 word-break">
                     {user.description}
                 </div>
             </div>
@@ -68,7 +79,7 @@ export const UserContainer = () => {
                 <div className="col-4 text-right">
                     Contact:
                 </div>
-                <div className="col-8">
+                <div className="col-8 word-break">
                     {user.email}
                 </div>
             </div>

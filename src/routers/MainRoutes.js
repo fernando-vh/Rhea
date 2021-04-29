@@ -10,6 +10,7 @@ import { logout } from "../actions/auth";
 import {MyNavbar} from '../components/ui/MyNavbar';
 import { ComposeScreen } from "../pages/ComposeScreen";
 import { DashboardScreen } from "../pages/DashboardScreen";
+import { EditorScreen } from "../pages/EditorScreen";
 import { HomeScreen } from "../pages/HomeScreen";
 import { SearchScreen } from "../pages/SearchScreen";
 import { ViewScreen } from "../pages/ViewScreen";
@@ -46,6 +47,7 @@ export const MainRoutes = () => {
                         <Route exact path="/composer"               component={ComposeScreen} />
                         <Route exact path="/search"                 component={SearchScreen} />
                         <Route exact path="/view/:component/:id"    component={ViewScreen} />
+                        <Route exact path="/editor/user"            component={EditorScreen}/>
 
                         <Redirect to="/home" />
                     </Switch>
