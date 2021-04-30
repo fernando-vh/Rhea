@@ -45,3 +45,12 @@ export const createResponseNotification = ({status, data}) => {
         }
     }
 }
+
+export const createNormalNotification = (title, message, error = true) => {
+    if(error){
+        NotificationManager.error(message, title);
+    }
+    else{
+        NotificationManager.success(message, title);
+    }
+}

@@ -38,3 +38,18 @@ export const cloneSongRequest = async (id) => {
         }
     })
 }
+
+export const changeProfilePicRequest = async (id, file) => {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    return await createAxiosRequest({
+        method:'put',
+        url: process.env.REACT_APP_KRONOS_API_BASE_URL+`/api/uploads/${id}/image`,
+        headers:{
+            'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            'Content-Type': 'multipart/form-data'
+        },
+        data: formData
+    })
+}

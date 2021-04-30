@@ -9,7 +9,7 @@ export const EditorScreen = () => {
     const {uid} = useSelector(state => state.auth);
     return(
         <div className="d-flex justify-content-center">
-            <div className="editor-component">
+            <div className="editor-component editor-size">
                 <h1>Edit my account</h1>
 
                 <Accordion defaultActiveKey="0">
@@ -73,7 +73,7 @@ export const EditorScreen = () => {
                     <Accordion.Toggle as={Card.Header} variant="link" eventKey="3">
                         <div className="section-div">
                             <i className="fas fa-caret-right mr-2"></i>
-                            Achieve account
+                            Archieve account
                         </div>
                     </Accordion.Toggle>
                     </Card.Header>

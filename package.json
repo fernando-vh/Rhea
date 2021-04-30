@@ -17,6 +17,7 @@
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.2.2",
     "react-h5-audio-player": "^3.7.0",
+    "react-image-crop": "^8.6.9",
     "react-notifications": "^1.7.2",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",

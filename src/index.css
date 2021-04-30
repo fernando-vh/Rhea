@@ -238,6 +238,10 @@ code {
   padding: 0px;
 }
 
+.editor-size{
+  width: 500px;
+}
+
 /* DASHBOARD PAGE STYLE */
 .fancy-title-text{
   color: whitesmoke;
