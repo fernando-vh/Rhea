@@ -31,11 +31,17 @@ export const SongContainerPublic = ({song}) => {
 
             <div className="d-flex align-items-center">
                 <div className="col-2 cut-text">
-                    <Link 
-                        className="link-white"
-                        to={`/view/${types.SEARCH_COMPONENTS.USERS}/${user.id}`}>
-                            {user.username}
-                    </Link>
+                    {
+                        user
+                            ?(
+                                <Link 
+                                    className="link-white"
+                                    to={`/view/${types.SEARCH_COMPONENTS.USERS}/${user.id}`}>
+                                        {user.username}
+                                </Link>
+                            )
+                            :(<div className="font-italic">no_user</div>)
+                    }
                 </div>
                 <div className="col-4 cut-text">
                     {song.title}

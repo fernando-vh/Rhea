@@ -8,6 +8,7 @@ import { AuthScreen } from "../pages/AuthScreen";
 import { MainRoutes } from "./MainRoutes"
 import {PrivateRoutes} from './PrivateRoutes';
 import {checkTokenIntegrity} from '../actions/auth'
+import { LoadingComponent } from "../components/ui/LoadingComponent";
 
 export const AppRouter = () => {
     const authState = useSelector(state => state.auth);
@@ -20,7 +21,7 @@ export const AppRouter = () => {
     }, [dispatch])
 
     if(checking){
-        return (<h1>Loading...</h1>)    
+        return (<LoadingComponent />)
     }
     else{
         return(

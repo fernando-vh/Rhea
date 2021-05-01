@@ -34,7 +34,8 @@ export const LoginForm = ({setNewUser}) => {
         else{
             dispatch(classicLogin({
                 email: form.email.value,
-                password: form.password.value
+                password: form.password.value,
+                remember: form.remember.checked
             }));
         }
         
@@ -77,11 +78,9 @@ export const LoginForm = ({setNewUser}) => {
                 </Form.Control.Feedback>
 
             </Form.Group>
-            {/*
-                <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Remember me" />
-                </Form.Group>
-            */}
+            <Form.Group controlId="remember">
+                <Form.Check type="checkbox" label="Remember me"/>
+            </Form.Group>
             
             <p className="text-center">or</p>
 

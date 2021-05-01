@@ -21,13 +21,11 @@ export default Rhea;
     
     fix:
         -fix that anoying paging movement (home/search)
-        -add action to change username, call in username update
     
     implement:
-        -token with long duration (10days)??, when remember me?
+
     
         
-    Make a fancy loading page (when token read) or maybe not?
-
-    Maybe, just maybe, add user preview in edit page?
+        
+        Maybe, just maybe, add user preview in edit page? or maybe not, probably not, yeah better not, definitely not
 */

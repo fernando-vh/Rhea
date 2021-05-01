@@ -3,9 +3,9 @@ import { createResponseNotification } from "../helpers/create-notification";
 import { types } from "../models/types/types";
 import { decode } from 'jsonwebtoken';
 
-export const classicLogin = ({email, password}) => {
+export const classicLogin = ({email, password, remember}) => {
     return async (dispatch) => {
-        const token = await login({ email, password }, types.LOGIN_TYPE.INTERNAL);
+        const token = await login({ email, password, remember }, types.LOGIN_TYPE.INTERNAL);
         let action = setLoginAction(token); 
     
         dispatch(action);

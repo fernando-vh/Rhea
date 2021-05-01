@@ -18,9 +18,8 @@ export const BasicInfoForm = ({uid}) => {
             const resp = await getUserByIdRequest(uid);
             setUser(resp.data.user);
         }
-
         getUser();
-    }, [user, uid])
+    }, [uid])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,11 +39,9 @@ export const BasicInfoForm = ({uid}) => {
 
             if(username.value.lenght === "") delete payload.username;
 
-            console.log(payload);
-
             const resp = await updateUserBasicInfoRequest(payload, uid);
             createResponseNotification(resp);
-            setUser(initialState);
+            setUser(resp.data.user);
             
             form.reset();
         }

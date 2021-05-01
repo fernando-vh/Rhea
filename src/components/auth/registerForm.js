@@ -105,11 +105,6 @@ export const RegisterForm = ({setNewUser}) => {
                 </Form.Control.Feedback>
 
             </Form.Group>
-            {/*
-                <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Remember me" />
-                </Form.Group>
-            */}
             
             <div className="d-flex justify-content-between">
                 <Col>

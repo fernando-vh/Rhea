@@ -26,7 +26,7 @@ export const MainRoutes = () => {
             if(resp.status === 401){
                 dispatch(logout());
             }
-            else{
+            else if(!resp.data.user.remember){
                 localStorage.setItem('token', resp.data.token);
             }
         }
