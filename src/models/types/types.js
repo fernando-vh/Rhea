@@ -43,5 +43,8 @@ export const types = {
         INTERNAL:1,
         GOOGLE:2,
         FACEBOOK:3
+    },
+    RESTRICTIONS:{
+        MAX_IMAGE_SIZE:225
     }
 }

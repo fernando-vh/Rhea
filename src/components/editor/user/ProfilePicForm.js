@@ -3,9 +3,10 @@ import { Button, Form } from 'react-bootstrap';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 import { createNormalNotification, createResponseNotification } from '../../../helpers/create-notification';
+import { types } from '../../../models/types/types';
 import { changeProfilePicRequest } from '../../../services/filesService';
 
-const standarImageSize = 225;
+const standarImageSize = types.RESTRICTIONS.MAX_IMAGE_SIZE;
 
 const initialState = {
     upImg:undefined,
