@@ -23,9 +23,9 @@ export const EditorScreen = () => {
                 Make of yourself what you want
             </div>
 
-            <div className="d-flex justify-content-center animate__animated animate__fadeIn">
+            <div className="d-flex justify-content-center">
 
-                <div className="editor-component editor-size">
+                <div className="editor-component editor-size animate__animated animate__fadeInUp">
                     <h1>Edit my account</h1>
 
                     <Accordion defaultActiveKey="0">
