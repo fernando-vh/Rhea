@@ -1,4 +1,4 @@
-# Welcome to the MMC (My Music Creator)
+# Welcome to Rhea from the MMC (My Music Creator)
 
 You are in the Rhea documentation. Rhea is our frontend server, it was created in React and everything you see here was kind of hard to implement, even if 50% of the code was copy-pasted from somewhere else.
 
